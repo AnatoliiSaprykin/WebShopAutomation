@@ -12,7 +12,7 @@ public class ProMXProductInstallerPage {
 	
 	public static WebElement element = null;
 	
-	public static String emailTrial = "germanproMXtestOrg@orgAcceptic.onmicrosoft.com";    //new trial 365 ID EMAIL
+	public static String emailTrial = "bilbobagendtestpromx@gmail.com";    //new trial 365 ID EMAIL
 	public static String passTrial = "123456sS@";
 	/**
 	 * Returns the email field, inputs String in it , waits for field to load

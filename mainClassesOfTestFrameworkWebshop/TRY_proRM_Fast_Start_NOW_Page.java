@@ -8,7 +8,7 @@ public class TRY_proRM_Fast_Start_NOW_Page {
 	
 	public static WebElement element = null;
 	
-	public static String crm_url = "https://orgacceptic.crm4.dynamics.com"; //URL FOR ONLINE CRM
+	public static String crm_url = "https://accepticpromxtest.crm.dynamics.com"; //URL FOR ONLINE CRM
 	
 	public static String pASSWORD = "123456sS@";   // PASSWORD FOR CRM
 	

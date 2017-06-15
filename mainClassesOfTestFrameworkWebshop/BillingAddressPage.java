@@ -1,6 +1,8 @@
 package mainClassesOfTestFrameworkWebshop;
 
 import org.openqa.selenium.By;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +10,8 @@ import org.openqa.selenium.WebElement;
 public class BillingAddressPage {
 	
 	public static WebElement element = null;
+	
+	private static final Logger log = LogManager.getLogger(Sys_LogIn.class.getName());
 	
 	/**
 	 * Returns Company field, clears and input data in it
@@ -24,6 +28,7 @@ public class BillingAddressPage {
 		element.click();
 		element.clear();
 		element.sendKeys(String.valueOf(Company));
+		log.info("Returns Company field, clears and input data in it");
 	}
 	
 	/**
@@ -40,6 +45,7 @@ public class BillingAddressPage {
 		element.click();
 		element.clear();
 		element.sendKeys(String.valueOf(firstName));
+		log.info("Returns First name field, clears and input data in it");
 	}
 	
 	/**
@@ -56,6 +62,8 @@ public class BillingAddressPage {
 		element.click();
 		element.clear();
 		element.sendKeys(String.valueOf(lastName));
+		
+		log.info("Returns Last name field, clears and input data in it");
 	}
 	
 	//country dropdown
@@ -75,6 +83,8 @@ public class BillingAddressPage {
 		element.click();
 		element.clear();
 		element.sendKeys(String.valueOf(region));
+		
+		log.info("Returns Region field, clears and input data in it");
 	}
 	
 	/**
@@ -107,6 +117,8 @@ public class BillingAddressPage {
 		element.click();
 		element.clear();
 		element.sendKeys(String.valueOf(postalCodeInt));
+		
+		log.info("Returns Postal Code  field, clears and input data in it");
 	}
 	
 	/**
@@ -123,6 +135,8 @@ public class BillingAddressPage {
 		element.click();
 		element.clear();
 		element.sendKeys(String.valueOf(numberAndStreetName));
+		
+		log.info("Returns Number and Street Name  field, clears and input data in it");
 	}
 	
 	/**
@@ -140,10 +154,12 @@ public class BillingAddressPage {
 		element.sendKeys(Keys.ARROW_DOWN);
 		element.sendKeys(Keys.ENTER);
 		
+		log.info("Returns Country  dropdown, selects state");
+		
 	}
 	
 	/**
-	 * Returns "Go to Payment" button , push it
+	 * Returns "Go to Payment" button , pushes it
 	  */
 	
 	public static WebElement Go_to_Payment_Button (WebDriver driver) {
@@ -154,6 +170,8 @@ public class BillingAddressPage {
 	public static void Go_to_Payment_ButtonPush (WebDriver driver) {
 		element =  Go_to_Payment_Button(driver);
 		element.sendKeys(Keys.ENTER);
+		
+		log.info("Returns Go to Payment button , pushes it");
 	}
 	
 	

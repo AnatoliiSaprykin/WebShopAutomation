@@ -3,9 +3,13 @@ package mainClassesOfTestFrameworkWebshop;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class WebShopHomePage {
 	public static WebElement element = null;
+	
+	private static final Logger log = LogManager.getLogger(Sys_LogIn.class.getName());
 	
 	/**
 	 * Returns the Home page by clicking logo element
@@ -18,6 +22,8 @@ public class WebShopHomePage {
 	public static void  clickHomeLogo (WebDriver driver) {
 		element = homeLogo(driver);
 		element.click();
+		
+		log.info("Returns the Home page by clicking logo element");		
 		
 	}
 	
@@ -33,6 +39,8 @@ public class WebShopHomePage {
 	public static void  clickEnglishSelect (WebDriver driver) {
 		element = englishSelect(driver);
 		element.click();
+		
+		log.info("Returns English language element and clicking on it");
 	}
 	
 	/**
@@ -47,6 +55,8 @@ public class WebShopHomePage {
 	public static void  deutschSelectclick (WebDriver driver) {
 		element = deutschSelect(driver);
 		element.click();
+		
+		log.info("Returns DE language element and clicking on it");
 	}
 	
 	
@@ -55,13 +65,14 @@ public class WebShopHomePage {
 	  */
 	
 	public static WebElement proRMBuy (WebDriver driver) {
-		element = driver.findElement(By.xpath("//div[@class = 'col-md-6']//ul//a[contains(@href,'/licenses/buy/1')]"));
+		element = driver.findElement(By.cssSelector("div.col-md-4:nth-child(1) > div:nth-child(1) > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)"));
 		return element;
 	}
 	
 	public static void  clickProRMBuy (WebDriver driver) {
 		element = proRMBuy(driver);
 		element.click();
+		log.info("clicking on proRM Buy element");
 		
 	}
 	
@@ -77,6 +88,8 @@ public class WebShopHomePage {
 	public static void  proRMTryClick (WebDriver driver) {
 		element = proRMTry(driver);
 		element.click();
+		
+		log.info("clicking on proRM Try element");
 		
 	}
 	
