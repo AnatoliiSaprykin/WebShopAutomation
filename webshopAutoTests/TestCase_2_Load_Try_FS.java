@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import mainClassesOfTestFrameworkWebshop.Sys_DriverChooseClass;
 import mainClassesOfTestFrameworkWebshop.FastStart_Installation_Page_In_Progress;
 import mainClassesOfTestFrameworkWebshop.Sys_LogIn;
-import mainClassesOfTestFrameworkWebshop.ProMXProductInstallerPage;
+import mainClassesOfTestFrameworkWebshop.ProMXProductInstallerPage_FS;
 import mainClassesOfTestFrameworkWebshop.TRY_proRM_Fast_Start_NOW_Page;
 import mainClassesOfTestFrameworkWebshop.WebShopHomePage;
 
@@ -42,10 +42,10 @@ public class TestCase_2_Load_Try_FS {
 		TRY_proRM_Fast_Start_NOW_Page.crmUrlField_FillUrl(driver);
 		TRY_proRM_Fast_Start_NOW_Page.InstallNow_Button_Push(driver);
 		
-		ProMXProductInstallerPage.emailFieldInstallerFillIn(driver);
-		ProMXProductInstallerPage.passwordFieldInstallerFillIn(driver);
+		ProMXProductInstallerPage_FS.emailFieldInstallerFillIn(driver);
+		ProMXProductInstallerPage_FS.passwordFieldInstallerFillIn(driver);
 		
-		ProMXProductInstallerPage.signIn_Button_Installer_Pusher(driver);
+		ProMXProductInstallerPage_FS.signIn_Button_Installer_Pusher(driver);
 		
 		//ProMXProductInstallerPage.acceptButton_Push(driver);
 		

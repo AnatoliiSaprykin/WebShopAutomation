@@ -12,10 +12,8 @@ public class Sys_LogIn {
 	
 	private static final Logger log = LogManager.getLogger(Sys_LogIn.class.getName());
 	
-	//credentials are stored here
 	
-	static String email = "natgreenprorm@gmail.com";
-	static String password = "123456sS@";
+	
 	
 	
 	//click on SIGN IN to open fields
@@ -38,7 +36,7 @@ public class Sys_LogIn {
 	
 	public static void filleMailField (WebDriver driver) {
 		element = eMailField(driver);
-		element.sendKeys(email);		
+		element.sendKeys(Credentials.email_webshop);		
 	}
 	
 	
@@ -50,7 +48,7 @@ public class Sys_LogIn {
 	public static void fillpasswordField (WebDriver driver) {
 		element = passwordField(driver);
 		element.click();
-		element.sendKeys(password);		
+		element.sendKeys(Credentials.password_webshop);		
 	}
 	
 	public static WebElement signInButton (WebDriver driver) {

@@ -8,12 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class ProMXProductInstallerPage {
+public class ProMXProductInstallerPage_FS {
 	
 	public static WebElement element = null;
 	
-	public static String emailTrial = "bilbobagendtestpromx@gmail.com";    //new trial 365 ID EMAIL
-	public static String passTrial = "123456sS@";
+	
+	
 	/**
 	 * Returns the email field, inputs String in it , waits for field to load
 		 */
@@ -31,7 +31,7 @@ public class ProMXProductInstallerPage {
 		
 		element.click();
 		element.clear();
-		element.sendKeys(emailTrial);
+		element.sendKeys(Credentials.emailTrial_fs);
 	}
 	
 	/**
@@ -49,7 +49,7 @@ public class ProMXProductInstallerPage {
 				
 		element.click();
 		element.clear();
-		element.sendKeys(passTrial);
+		element.sendKeys(Credentials.passTrial_fs);
 	}
 	
 	
@@ -75,15 +75,15 @@ public class ProMXProductInstallerPage {
 	
 	
 	/**
-	 * Returns the Accept button in new opend page - push
+	 * Returns the Accept button in new opened page - push
 		 */
 	
 	public static WebElement acceptButton (WebDriver driver) {
-		element = driver.findElement(By.id("cred_accept_button"));
+		element = driver.findElement(By.cssSelector("#cred_accept_button"));
 		return element;		
 	}
 	
-	public static void acceptButton_Push (WebDriver driver) throws InterruptedException {
+	/*public static void acceptButton_Push (WebDriver driver) throws InterruptedException {
 		element = acceptButton(driver);
 		
 				
@@ -96,10 +96,39 @@ public class ProMXProductInstallerPage {
 		
 		Actions action = new Actions(driver);
 		action.moveToElement(element).click().perform();
+	}*/
+	
+	
+	public static void click_acceptButton (WebDriver driver) {
+		element = acceptButton(driver);
+		element.click();
+		
+	}
+	
+	/* Main method */
+	
+	public static void ProMXProductInstallerPage_FS_main_method (WebDriver driver) {
+		emailFieldInstallerFillIn(driver);
+		
+		passwordFieldInstallerFillIn(driver);
+		
+		try {
+			signIn_Button_Installer_Pusher(driver);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		/*try {
+			acceptButton_Push(driver);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		click_acceptButton(driver);
+		
 	}
 	
 	
 	
-	
-
 }

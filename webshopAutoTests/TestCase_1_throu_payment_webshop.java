@@ -18,7 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-public class TestCase_1_log_in {
+public class TestCase_1_throu_payment_webshop {
 	
 	private WebDriver driver;
 	private String baseUrl;

@@ -8,9 +8,8 @@ public class TRY_proRM_Fast_Start_NOW_Page {
 	
 	public static WebElement element = null;
 	
-	public static String crm_url = "https://accepticpromxtest.crm.dynamics.com"; //URL FOR ONLINE CRM
+		
 	
-	public static String pASSWORD = "123456sS@";   // PASSWORD FOR CRM
 	
 	/**
 	 * Returns the CRM URL field, inputs String in it (online CRM URL)
@@ -25,7 +24,7 @@ public class TRY_proRM_Fast_Start_NOW_Page {
 		element = crmUrlField(driver);
 		element.click();
 		element.clear();
-		element.sendKeys(crm_url);
+		element.sendKeys(Credentials.crm_url_fs);
 		
 	}
 	
